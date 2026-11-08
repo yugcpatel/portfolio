@@ -81,10 +81,10 @@ export default function InteractiveEstimator() {
   };
 
   return (
-    <section id="calculator" className="py-16 md:py-24 px-4 bg-white scroll-mt-24">
+    <section id="calculator" className="py-12 md:py-16 px-4 bg-white scroll-mt-24">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-[680px] mx-auto mb-12">
+        <div className="text-center max-w-[680px] mx-auto mb-8">
           <span className="caption-3 text-blue-600 uppercase tracking-wider block mb-2">
             Interactive estimate tools
           </span>

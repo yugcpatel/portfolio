@@ -69,9 +69,9 @@ export default function TaglineReveal() {
     : Math.floor(progress * (words.length + 2));
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-[#F8FAFC] border-y border-slate-200">
+    <section className="py-10 md:py-14 px-4 bg-[#F8FAFC] border-y border-slate-200">
       <div ref={containerRef} className="max-w-[680px] mx-auto text-center">
-        <span className="caption-3 text-blue-600 uppercase tracking-wider block mb-4">
+        <span className="caption-3 text-blue-600 uppercase tracking-wider block mb-3">
           The local search reality
         </span>
         <p className="heading-3 text-[#09090B] leading-snug tracking-tight">

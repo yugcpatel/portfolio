@@ -14,8 +14,8 @@ import { FounderSignature } from './BrandingElements';
 
 export default function DeveloperAccountability() {
   return (
-    <section className="py-16 md:py-24 px-4 bg-white">
-      <div className="max-w-5xl mx-auto space-y-12">
+    <section className="py-12 md:py-16 px-4 bg-white">
+      <div className="max-w-5xl mx-auto space-y-8">
         {/* Developer Accountability Card */}
         <div className="p-6 md:p-10 rounded-2xl border border-slate-200 bg-[#F8FAFC] shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">

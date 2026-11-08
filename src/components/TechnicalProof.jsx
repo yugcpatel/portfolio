@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gauge, Lightning, CheckCircle, Quotes, ShieldCheck, ArrowsLeftRight } from '@phosphor-icons/react';
+import { Gauge, Lightning, CheckCircle, ShieldCheck, ArrowsLeftRight } from '@phosphor-icons/react';
 
 /*
   ==============================================================================
@@ -110,14 +110,14 @@ export default function TechnicalProof() {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-[#F8FAFC] border-y border-slate-200">
+    <section className="py-12 md:py-16 px-4 bg-[#F8FAFC] border-y border-slate-200">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-[680px] mx-auto mb-16">
+        <div className="text-center max-w-[680px] mx-auto mb-10">
           <span className="caption-3 text-blue-600 uppercase tracking-wider block mb-2">
             Verifiable technical performance
           </span>
-          <h2 className="heading-2 text-[#09090B] mb-4">
+          <h2 className="heading-2 text-[#09090B] mb-3">
             Speed and code quality you can verify yourself
           </h2>
           <p className="body-2 text-[#52525B]">
@@ -126,7 +126,7 @@ export default function TechnicalProof() {
         </div>
 
         {/* Benchmarks Row in Geist Mono */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {benchmarks.map((b) => (
             <div
               key={b.label}
@@ -136,7 +136,7 @@ export default function TechnicalProof() {
                 <span className="font-mono text-4xl md:text-5xl font-semibold text-[#09090B] tracking-tight">
                   {b.metric}
                 </span>
-                <div className="p-2 rounded-lg bg-[#F8FAFC] border border-slate-200">
+                <div className="p-2.5 rounded-lg bg-[#F8FAFC] border border-slate-200">
                   {b.icon}
                 </div>
               </div>
@@ -152,59 +152,8 @@ export default function TechnicalProof() {
           ))}
         </div>
 
-        {/* Testimonials with strict marked placeholders per Rule B8 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Testimonial Card 1 */}
-          <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <Quotes weight="bold" className="w-6 h-6 text-blue-600" />
-                <span className="font-mono text-xs text-[#52525B] bg-[#F8FAFC] px-2 py-0.5 rounded border border-slate-200">
-                  Vancouver local business
-                </span>
-              </div>
-              <p className="body-3 text-[#09090B]">
-                "{'{{client_testimonial_1}}'}"
-              </p>
-            </div>
-            <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <p className="title-4 font-semibold text-[#09090B]">Verified local business owner</p>
-                <p className="caption-2 text-[#52525B]">Driving academy founder in Vancouver</p>
-              </div>
-              <span className="caption-3 font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                Verified review
-              </span>
-            </div>
-          </div>
-
-          {/* Testimonial Card 2 */}
-          <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-xs flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <Quotes weight="bold" className="w-6 h-6 text-blue-600" />
-                <span className="font-mono text-xs text-[#52525B] bg-[#F8FAFC] px-2 py-0.5 rounded border border-slate-200">
-                  Surrey auto service
-                </span>
-              </div>
-              <p className="body-3 text-[#09090B]">
-                "{'{{client_testimonial_2}}'}"
-              </p>
-            </div>
-            <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <p className="title-4 font-semibold text-[#09090B]">Verified shop manager</p>
-                <p className="caption-2 text-[#52525B]">Automotive repair specialist in Surrey</p>
-              </div>
-              <span className="caption-3 font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                Verified review
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* Interactive Before & After Overhaul Slider Toggle */}
-        <div className="mt-8 text-center">
+        <div className="text-center">
           <button
             type="button"
             onClick={() => setShowComparison(!showComparison)}
@@ -216,13 +165,6 @@ export default function TechnicalProof() {
         </div>
 
         {showComparison && <BeforeAfterComparison />}
-
-        {/*
-          ==============================================================================
-          BEFORE & AFTER COMPARISON PLACEHOLDER (UNCOMMENT AS SOON AS FIRST CLIENT LAUNCHES)
-          <BeforeAfterComparison />
-          ==============================================================================
-        */}
       </div>
     </section>
   );

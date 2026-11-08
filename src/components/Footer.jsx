@@ -8,7 +8,7 @@ export default function Footer({ onToggle404 }) {
 
   return (
     <>
-      <footer className="py-12 md:py-16 px-4 bg-[#F8FAFC] border-t border-slate-200">
+      <footer className="py-10 md:py-12 px-4 bg-[#F8FAFC] border-t border-slate-200">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2">
