@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #09090B;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Disallow italics across the entire interface per Rule B1 */
+  *, *::before, *::after {
+    font-style: normal !important;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-1.5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 7s ease-in-out infinite 1.5s;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 8s ease-in-out infinite 0.5s;
+}
+
+@layer utilities {
+  /* Named text styles from Specification Rule B1 */
+  .heading-1 {
+    font-size: 2.25rem;
+    line-height: 1.05;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-1 {
+      font-size: 3.75rem;
+      line-height: 1.05;
+    }
+  }
+
+  .heading-2 {
+    font-size: 1.875rem;
+    line-height: 1.1;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-2 {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+  }
+
+  .heading-3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-3 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .heading-4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-4 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  .heading-5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-5 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  .heading-6 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .heading-6 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  .title-1 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  .title-2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  .title-3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  .title-4 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  .title-5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  .body-1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-wrap: pretty;
+  }
+
+  .body-2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-wrap: pretty;
+  }
+
+  .body-3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-wrap: pretty;
+  }
+
+  .body-4 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    text-wrap: pretty;
+  }
+
+  .body-5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-wrap: pretty;
+  }
+
+  .body-6 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    text-wrap: pretty;
+  }
+
+  .button-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+
+  .button-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+
+  .button-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+
+  .button-xsm {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+  }
+
+  .caption-1 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+
+  .caption-2 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+
+  .caption-3 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+  }
+
+  .caption-4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+  }
+
+  .caption-5 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+  }
+}
