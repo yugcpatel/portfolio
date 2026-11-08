@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yugcpatel.github.io/portfolio/sitemap.xml
+
