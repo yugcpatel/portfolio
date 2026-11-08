@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Sparkle, X, ShieldCheck, FileText, ArrowLeft } from '@phosphor-icons/react';
+import { X, ShieldCheck, FileText, ArrowLeft } from '@phosphor-icons/react';
 import { SITE_CONFIG } from '../config';
+import { QuantumNestMonogram } from './BrandingElements';
 
 export default function Footer({ onToggle404 }) {
   const [activeModal, setActiveModal] = useState(null); // 'privacy' | 'terms' | null
@@ -11,10 +12,8 @@ export default function Footer({ onToggle404 }) {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Brand Info */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#0F172A] flex items-center justify-center text-white">
-                <Sparkle weight="bold" className="w-3.5 h-3.5" />
-              </div>
+            <div className="flex items-center gap-2.5">
+              <QuantumNestMonogram className="w-7 h-7" />
               <span className="title-2 font-semibold text-[#09090B]">
                 {SITE_CONFIG.brandName}
               </span>

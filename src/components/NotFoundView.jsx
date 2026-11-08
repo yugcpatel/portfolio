@@ -1,13 +1,14 @@
 import React from 'react';
-import { ArrowLeft, Sparkle, WarningCircle } from '@phosphor-icons/react';
+import { ArrowLeft, WarningCircle } from '@phosphor-icons/react';
 import { SITE_CONFIG } from '../config';
+import { QuantumNestMonogram } from './BrandingElements';
 
 export default function NotFoundView({ onBackToHome }) {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 text-center">
       {/* Brand Icon */}
-      <div className="w-12 h-12 rounded-full bg-[#0F172A] flex items-center justify-center text-white mb-6 shadow-sm">
-        <Sparkle weight="bold" className="w-6 h-6 text-white" />
+      <div className="mb-6 shadow-sm rounded-2xl overflow-hidden">
+        <QuantumNestMonogram className="w-12 h-12" />
       </div>
 
       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] border border-slate-200 text-xs font-mono text-[#52525B] mb-6">

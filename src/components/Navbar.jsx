@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { List, X, Sparkle, ArrowRight, PhoneCall, WhatsappLogo } from '@phosphor-icons/react';
+import { List, X, ArrowRight, PhoneCall, WhatsappLogo } from '@phosphor-icons/react';
 import { SITE_CONFIG } from '../config';
+import { QuantumNestMonogram } from './BrandingElements';
 
 export default function Navbar({ onOpenCta }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,10 +68,10 @@ export default function Navbar({ onOpenCta }) {
               e.preventDefault();
               scrollTo('#hero');
             }}
-            className="flex items-center gap-2 group text-[#09090B] focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded-full"
+            className="flex items-center gap-2.5 group text-[#09090B] focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none rounded-full"
           >
-            <div className="w-8 h-8 rounded-full bg-[#0F172A] flex items-center justify-center text-white shadow-xs transition-transform duration-300 group-hover:scale-105 active:scale-95">
-              <Sparkle weight="bold" className="w-4 h-4 text-white" />
+            <div className="transition-transform duration-300 group-hover:scale-105 active:scale-95 shadow-xs rounded-xl overflow-hidden">
+              <QuantumNestMonogram className="w-8 h-8" />
             </div>
             <div className="flex flex-col text-left">
               <span className="title-3 font-semibold tracking-tight text-[#09090B]">

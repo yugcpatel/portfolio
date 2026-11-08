@@ -10,6 +10,7 @@ import {
   EnvelopeSimple,
 } from '@phosphor-icons/react';
 import { SITE_CONFIG } from '../config';
+import { FounderSignature } from './BrandingElements';
 
 export default function DeveloperAccountability() {
   return (
@@ -31,6 +32,15 @@ export default function DeveloperAccountability() {
                   Lead developer and founder at {SITE_CONFIG.brandName}
                 </p>
               </div>
+
+              {/* Handwritten Vector Signature (Upgrade 4) */}
+              <div className="pt-1 pb-1">
+                <FounderSignature className="w-44 h-12" />
+                <p className="font-mono text-[11px] text-[#52525B] mt-0.5">
+                  Direct cell: {SITE_CONFIG.phoneDisplay}
+                </p>
+              </div>
+
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-xs font-mono text-[#09090B]">
                 <MapPin weight="bold" className="w-3.5 h-3.5 text-blue-600" />
                 <span>Based in {SITE_CONFIG.city}</span>
